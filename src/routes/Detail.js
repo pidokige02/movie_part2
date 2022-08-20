@@ -17,7 +17,8 @@ function Detail() {
 
   useEffect(() => {
     getMovieDetail();
-  }, []);
+  },[getMovieDetail] );
+
   return (
     <div>
       {loading ? (
@@ -67,7 +68,7 @@ function Detail() {
                 className={styles.yts}
                 href={movieDetail.url}
                 alt="Download Movie"
-                target="_blank"
+                target="_blank" rel="noreferrer"
               >
                 Download Movie
               </a>
